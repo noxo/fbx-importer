@@ -48,7 +48,7 @@ Manual building steps
 4. Create JNI header file (de_tesis_dynaware_javafx_graphics_importers_fbx_JFbxLib.h)
   * javah -cp . de.tesis.dynaware.javafx.graphics.importers.fbx.JFbxLib
   * Add file to XCode project 
-5. Build project and copy produced .lib file to Java project
+5. Build project and copy produced libjbxlib.jnilib file to Java project
 6. Copy libfbxsdk.dylib from Autodesk SDK to /usr/lib
 
 ## Linux
