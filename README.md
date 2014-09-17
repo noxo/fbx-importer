@@ -37,7 +37,7 @@ First ensure the following are installed
 
 Manual building steps
 
-1. Create new C++ library (name="jbxlib", type="dynamic")
+1. Create new C++ library project (name="jbxlib", type="dynamic")
   * Change "Executable extension" to jnilib
   * Add to "Header Search Paths"
     * "/Applications/Autodesk/FBX SDK/"2015.1/include
