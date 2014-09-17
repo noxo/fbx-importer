@@ -27,7 +27,31 @@ Set the following environment variables
 
 Open a terminal and run 'gradle' from the project root directory.
 
-### Mac / Linux
+### Mac
+
+First ensure the following are installed
+
+1. JDK 1.8 b132+
+2. XCode
+3. Autodesk FBX SDK (www.autodesk.com/developfbx)
+
+Manual building steps
+
+1. Create new C++ library (name="jbxlib", type="dynamic")
+  * Change "Executable extension" to jnilib
+  * Add to "Header Search Paths"
+    * "/Applications/Autodesk/FBX SDK/"2015.1/include
+    * /Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/include
+2. Add JFbxLib.cpp and JFbxLib.h to project
+3. Add Autodesk SDK library to project
+  * Build phases -> Link with library = libfbxsdk.a (from Autodesk SDK)
+4. Create JNI header file (de_tesis_dynaware_javafx_graphics_importers_fbx_JFbxLib.h)
+  * javah -cp . de.tesis.dynaware.javafx.graphics.importers.fbx.JFbxLib
+  * Add file to XCode project 
+5. Build project and copy produced .lib file to Java project
+6. Copy libfbxsdk.dylib from Autodesk SDK to /usr/lib
+
+## Linux
 
 Not yet supported. Contributions are welcome.
 
